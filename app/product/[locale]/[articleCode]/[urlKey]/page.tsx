@@ -1,6 +1,8 @@
 import { getProductInfosLight } from "@/lib/api";
 import Link from "next/link";
 
+export const revalidate = 600;
+
 export default async function ProductPage({
   params,
 }: {
@@ -27,12 +29,12 @@ export default async function ProductPage({
     <div>
       ProductPage {locale}-{articleCode}-{urlKey}
       <div className="flex flex-col gap-2">
-        <Link href={`/product/fr/123456/product-1`}>Go to product FR 1</Link>
-        <Link href={`/product/fr/123456/product-2`}>Go to product FR 2</Link>
-        <Link href={`/product/fr/123456/product-3`}>Go to product FR 3</Link>
-        <Link href={`/product/en/123456/product-1`}>Go to product EN 1</Link>
-        <Link href={`/product/en/123456/product-2`}>Go to product EN 2</Link>
-        <Link href={`/product/en/123456/product-3`}>Go to product EN 3</Link>
+        <Link href={`/product/fr/123456/product-z`}>Go to product FR 1</Link>
+        <Link href={`/product/fr/123456/product-x`}>Go to product FR 2</Link>
+        <Link href={`/product/fr/123456/product-y`}>Go to product FR 3</Link>
+        <Link href={`/product/en/123456/product-z`}>Go to product EN 1</Link>
+        <Link href={`/product/en/123456/product-x`}>Go to product EN 2</Link>
+        <Link href={`/product/en/123456/product-y`}>Go to product EN 3</Link>
       </div>
     </div>
   );
