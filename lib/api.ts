@@ -6,19 +6,20 @@ interface GetProductInfosLightVariables {
   articleCode: string;
 }
 
-export const getProductInfosLight = async (
+export const getProductInfosLight = (
   variables: GetProductInfosLightVariables,
 ) => {
-  const keyParts = [
-    "product-infos-light",
-    variables.locale,
-    variables.urlKey,
-    variables.articleCode?.toString() || "",
-  ];
+  //   const keyParts = [
+  //     "product-infos-light",
+  //     variables.locale,
+  //     variables.urlKey,
+  //     variables.articleCode?.toString() || "",
+  //   ];
 
   return unstable_cache(
-    async () => getProductInfosLightNoCache(variables),
-    keyParts,
+    async (variables: GetProductInfosLightVariables) =>
+      getProductInfosLightNoCache(variables),
+    ["product-infos-light"],
     {
       revalidate: 6000,
       tags: buildProductTags({
@@ -27,7 +28,7 @@ export const getProductInfosLight = async (
         locale: variables.locale,
       }),
     },
-  )();
+  )(variables);
 };
 
 const getProductInfosLightNoCache = async (

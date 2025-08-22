@@ -14,6 +14,7 @@ export default async function ProductPage({
   console.log("params", p);
   const { locale, articleCode, urlKey } = p;
   console.log(locale);
+
   const product = await getProductInfosLight({
     locale,
     urlKey,
