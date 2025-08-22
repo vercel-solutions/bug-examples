@@ -3,6 +3,26 @@ import Link from "next/link";
 
 export const revalidate = 600;
 
+export async function generateStaticParams() {
+  return [
+    {
+      locale: "fr",
+      articleCode: "123456",
+      urlKey: "product-z",
+    },
+    {
+      locale: "fr",
+      articleCode: "123456",
+      urlKey: "product-x",
+    },
+    {
+      locale: "fr",
+      articleCode: "123456",
+      urlKey: "product-y",
+    },
+  ];
+}
+
 export default async function ProductPage({
   params,
 }: {
