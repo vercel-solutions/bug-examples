@@ -6,16 +6,15 @@ export default async function ProductPage({
   params,
 }: {
   params: Promise<{
-    code: string;
     locale: string;
-    gender: string;
-    category: string;
+    catId: string;
+    subCatId: string;
   }>;
 }) {
   const _params = await params;
-  console.log("product page params", _params);
+  console.log("category page params", _params);
 
-  if (_params.category !== "shoes") {
+  if (_params.subCatId !== "shoes") {
     notFound();
   }
 
