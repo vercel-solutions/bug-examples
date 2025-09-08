@@ -4,6 +4,7 @@ import { NextResponse } from "next/server";
 export function middleware(request: NextRequest) {
   if (request.nextUrl.pathname.startsWith("/en")) {
     console.log(request.nextUrl.pathname);
+
     return NextResponse.rewrite(
       new URL(`/code123${request.nextUrl.pathname}`, request.url),
     );
