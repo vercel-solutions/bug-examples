@@ -13,10 +13,10 @@ export default async function HomePage({
 
       <ul>
         <li className="text-yellow-500">
-          <Link href={`/en/men/shoes`}>→ Link to products page</Link>
+          <Link href={`/en/products`}>→ Link to products page</Link>
         </li>
         <li className="text-yellow-500">
-          <Link href={`/en/foo`}>→ Link to missing route</Link>
+          <Link href={`/en/foo`}>→ To catchall route</Link>
         </li>
       </ul>
     </div>
