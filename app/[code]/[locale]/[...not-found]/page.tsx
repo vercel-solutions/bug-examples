@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation";
 
+export const dynamic = "error";
+
 export default async function CatchAllPage(
   params: Promise<Record<string, unknown>>,
 ) {
