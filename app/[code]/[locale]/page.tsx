@@ -16,7 +16,7 @@ export default async function HomePage({
           <Link href={`/en/men/shoes`}>→ Link to products page</Link>
         </li>
         <li className="text-yellow-500">
-          <Link href={`/en/men`}>→ Link to missing route</Link>
+          <Link href={`/en/foo`}>→ Link to missing route</Link>
         </li>
       </ul>
     </div>

@@ -1,3 +1,5 @@
+import { notFound } from "next/navigation";
+
 export const dynamic = "error";
 
 export default async function ProductPage({
@@ -10,7 +12,12 @@ export default async function ProductPage({
     category: string;
   }>;
 }) {
-  console.log("product page params", await params);
+  const _params = await params;
+  console.log("product page params", _params);
+
+  if (_params.category !== "shoes") {
+    notFound();
+  }
 
   return <div>product page</div>;
 }
