@@ -1,7 +1,5 @@
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode[];
-}) {
+import type { PropsWithChildren } from "react";
+
+export default function RootLayout({ children }: PropsWithChildren) {
   return children;
 }
