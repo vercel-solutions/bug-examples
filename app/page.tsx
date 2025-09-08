@@ -13,10 +13,12 @@ export default async function HomePage({
 
       <ul>
         <li className="text-yellow-500">
-          <Link href={`/en/products`}>→ Link to products page</Link>
+          <Link href={`/en/clothing/shoes`}>
+            → Link to /[locale]/(all)/[catId]/[subCatId]
+          </Link>
         </li>
         <li className="text-yellow-500">
-          <Link href={`/en/foo`}>→ To catchall route</Link>
+          <Link href={`/en/foo`}>→ To /[locale]/(all)/[...not-found]</Link>
         </li>
       </ul>
     </div>
