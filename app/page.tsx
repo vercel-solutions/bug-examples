@@ -8,7 +8,7 @@ export default async function HomePage({
   const _params = await params;
   console.log("home page params", _params);
   return (
-    <div className="flex flex-col gap-4 p-8">
+    <div className="flex flex-col gap-4 p-8 max-w-4xl">
       <h1>Home</h1>
 
       <ul>
