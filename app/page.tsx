@@ -8,17 +8,24 @@ export default async function HomePage({
   const _params = await params;
   console.log("home page params", _params);
   return (
-    <div>
+    <div className="flex flex-col gap-4 p-8">
       <h1>Locale Home Page: {_params.locale}</h1>
 
       <ul>
-        <li className="text-yellow-500">
+        <li>
           <Link href={`/en/clothing/shoes`}>
-            → To /[locale]/(all)/[catId]/[subCatId]
+            <code>→ /en/clothing/shoes</code>
           </Link>
         </li>
-        <li className="text-yellow-500">
-          <Link href={`/en/foo`}>→ To /[locale]/(all)/[...not-found]</Link>
+        <li>
+          <Link href={`/en/food/pizza`}>
+            <code>→ /en/food/pizza</code>
+          </Link>
+        </li>
+        <li>
+          <Link href={`/en/foo`}>
+            <code>→ /en/foo</code>
+          </Link>
         </li>
       </ul>
     </div>

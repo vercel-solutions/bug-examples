@@ -24,3 +24,10 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+code {
+  background-color: transparent;
+  padding: 2px;
+  font-size: 0.8rem;
+  color: var(--color-yellow-500);
+}
